@@ -1,0 +1,38 @@
+.client {
+   padding-top: 94px;
+   padding-bottom: 94px;
+   &__head{
+   margin-bottom: 50px;
+}
+}
+
+.client-list {
+   display: flex;
+   margin: -15px;
+   &__item {
+   cursor: pointer;
+   display: inline-flex;
+   margin: 15px;
+
+   width: 170px;
+   height: 92px;
+   border: 1px solid #afb1b8;
+   border-radius: 3px;
+
+   fill: var(--svg-color);
+}
+   &__icon {
+   margin: auto;
+   fill: #afb1b8;
+}
+   &__item:hover,
+   &__item:focus {
+   border-color: var(--button-background-color);
+   transition: border-color 350ms var(--timing-function);
+}
+   &__item:hover &__icon,
+   &__item:focus &__icon {
+   fill: var(--button-background-color);
+   transition: fill 350ms var(--timing-function);
+}
+}

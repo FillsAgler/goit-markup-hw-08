@@ -1,0 +1,18 @@
+.logo {
+   font-family: var(--logo-found);
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 1.19;
+   letter-spacing: 0.03em;
+   cursor: pointer;
+
+   padding-top: 23px;
+   padding-bottom: 25px;
+   color: var(--logo-color);
+}
+.logo-studio {
+   color: var(--header-logo-color);
+}
+.studio-logo_inversion{
+   color: white;
+}

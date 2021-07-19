@@ -1,0 +1,52 @@
+.btn { 
+   cursor: pointer;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 1.8;
+   letter-spacing: 0.03em;
+   padding: 10px 32px 10px 32px;
+   border-radius: 4px;
+   background-color: var(--button-background-color);
+   color: var(--white-color);
+   &:hover,
+   &:focus {
+   color: var(--white-color);
+   background-color: #188ce8;
+   transition: color 250ms var(--timing-function),
+               background-color 250ms var(--timing-function),
+               transform 250ms var(--timing-function);
+            }
+}
+.btn_send-icon {
+   position: relative;
+   padding: 10px 62px 10px 29px;
+   &:after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   right: 28px;
+   width: 24px;
+   height: 24px;
+   transform: translateY(-50%);
+   background-image: url("../images/sprites/svg/send.svg");
+   }
+}
+.btn_filter {
+   display: block;
+   padding: 6px 22px 6px 22px;
+   font-weight: 500;
+   line-height: 1.6;
+   letter-spacing: 0.03em;
+   background-color: #f5f4fa;
+   color: var(--title-text-color);
+   &hover,
+   &focus,
+   &active {
+      color: var(--white-color);
+      background-color: var(--button-background-color);
+      box-shadow: var(--shadow-button);
+      transition: color 250ms var(--timing-function),
+                  background-color 250ms var(--timing-function),
+                  box-shadow 250ms var(--timing-function);
+   }
+}

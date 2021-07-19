@@ -1,0 +1,36 @@
+:root {
+   --white-color: #fff;
+   /*Button text*/
+   --title-text-color: #212121;
+   /*Button text*/
+   --subtitle-text-color: #757575;
+   /*found-family*/
+   --basic-side-found: Roboto;
+   --logo-found: Raleway;
+   /*logo-heder*/
+   --logo-color: #2196f3;
+   --header-logo-color: #000;
+   --footer-logo-color: #fff;
+   /*Icon*/
+   --social-svg-color: #afb1b8;
+   /*Hover-nav-footer*/
+   --hover-color: #18a0fb;
+   /*Button-background-color*/
+   --button-background-color: #2196f3;
+   /*Background-color*/
+   --primary-background: #fff;
+   --section-background: #2f303a;
+   /*feature*/
+   --feature-icon-background: #f5f4fa;
+   /*margin-left*/
+   --feature-margin-left: 30px;
+   --nararative-margin-left: 30px;
+   --team-margin-left: 30px;
+   --project-margin-left: 30px;
+   /*margin-top*/
+   --project-margin-top: 30px;
+   /*Shadow*/
+   --shadow-button: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+   /*Animation*/
+   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

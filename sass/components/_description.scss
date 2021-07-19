@@ -1,0 +1,19 @@
+.description{
+   cursor: pointer;
+/*position*/
+   padding: 27px 0;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+/*text position*/
+   text-align: center;
+   width: 100%;
+/*text*/
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   text-transform: uppercase;
+
+   color: var(--white-color);
+   background-color: rgba(47, 48, 58, 0.8);
+}

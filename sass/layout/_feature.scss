@@ -1,0 +1,33 @@
+.feature {
+   padding-top: 94px;
+   padding-bottom: 47px;
+}
+
+.feature-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   font-size: 14px;
+   letter-spacing: 0.03em;
+   &__item {
+   flex-basis: calc(100% / 4 - var(--feature-margin-left));
+}
+   &__tumb {
+   display: block;
+   text-align: center;
+   border-radius: 4px;
+   padding: 25px 0;
+   margin-bottom: 30px;
+   background-color: var(--feature-icon-background);
+}
+   &__title {
+   font-weight: 700;
+   line-height: 1.14;
+   text-transform: uppercase;
+   padding-bottom: 10px;
+}
+   &__text {
+   line-height: 1.71;
+   color: var(--subtitle-text-color);
+}
+}
