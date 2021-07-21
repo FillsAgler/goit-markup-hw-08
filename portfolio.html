@@ -13,7 +13,7 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="sass/main.css">
   <title>Портфолио</title>
 </head>
 
@@ -49,14 +49,61 @@
               +38 096 111 11 11</a>
           </li>
         </ul>
+        <button type="button" class="menu-open">
+          <svg width="22" height="22" aria-label="Переключатель мобильного меню">
+            <use class="menu-open__icon" href="./images/sprites/svg/sprite.svg#icon-menu"></use>
+            <use class="menu-open__menu" href="./images/sprites/svg/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
     </div>
+    <div class="mob-menu is-hidden" >
+      <div class="container">
+      <button class="btn-close">
+        <svg class="modal-close-icon">
+        </svg>
+        </button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-list__item">
+            <a href="/index.html" class="mob-menu-list__link">Студия</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a href="./portfolio.html" class="mob-menu-list__link mob-menu-list__active">Портфолио</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a href="" class="mob-menu-list__link">Контакты</a>
+          </li>
+        </ul>
+        <div class="mob-menu-bottom">
+          <ul class="mob-menu-contacts list">
+            <li class="mob-menu-contacts__item">
+              <a href="" class="mob-menu-contacts__link mob-menu-contacts__link_size_big">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-menu-contacts__item">
+              <a href="" class="mob-menu-contacts__link mob-menu-contacts__link_size_small">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mob-menu-social list">
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">Instagram</a>
+            </li>
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">Twitter</a>
+            </li>
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">Facebook</a>
+            </li>
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
   </header>
 
   <!--фільтр-->
   <section class="portfolio">
     <div class="container">
       <ul class="filter-list">
-        <li class=filter-list__item"><button class="filter-list__button btn btn_filter" type="button">Все</button></li>
+        <li class="filter-list__item"><button class="filter-list__button btn btn_filter" type="button">Все</button></li>
         <li class="filter-list__item"><button class="filter-list__button btn btn_filter" type="button">Веб-сайты</button></li>
         <li class="filter-list__item"><button class="filter-list__button btn btn_filter" type="button">Приложения</button></li>
         <li class="filter-list__item"><button class="filter-list__button btn btn_filter" type="button">Дизайн</button></li>
@@ -68,8 +115,13 @@
             <a class="projects-description-tumb" href="#">
               <div class="projects-list__description">  
                 <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-              </div>  
-              <img class="projects-list__image  image" src="./images/project/img1.jpg" alt="Изображение Игоря Демьяненко" width="370" />
+              </div> 
+              <picture>
+                <source srcset="./images/project/img1x2.jpg 2x, ./images/project/img1.jpg 1x" media="(min-width: 1200px)">
+                <source srcset="./images/project/tablet/img_x2.jpg 2x, ./images/project/img1.jpg 1x" media="(min-width: 768px)">
+                <source srcset="./images/project/mobile/port1х2.jpg 2x, ./images/project/mobile/port1.jpg 1x" media="(min-width: 320px)">
+                <img class="projects-list__image  image" src="./images/project/img1.jpg" alt="Изображение Игоря Демьяненко"/>
+                </picture>
             </a>
             <div>
               <h3 class="projects-list__title">Технокряк</h3>
@@ -81,8 +133,14 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div>  
-            <img class="projects-list__image image" src="./images/project/img2.jpg" alt="Изображение Ольги Репиной" width="370" />
+            </div>
+            <picture>
+              <source srcset="./images/project/img2x2.jpg 2x, ./images/project/img2.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img1x2.jpg 2x, ./images/project/tablet/img1.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img1x2.jpg 2x, ./images/project/mobile/img1.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img2.jpg" alt="Изображение Ольги Репиной" />
+            </picture>
+            
           </a>
           <div>
             <h3 class="projects-list__title">Постер New Orlean vs Golden Star</h3>
@@ -94,8 +152,13 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div>  
-            <img class="projects-list__image image" src="./images/project/img3.jpg" alt="Изображение Николая Тарасова" width="370" />
+            </div>
+            <picture>
+              <source srcset="./images/project/img3x2.jpg 2x, ./images/project/img3.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img3x2.jpg 2x, ./images/project/tablet/img3.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img2x2.jpg 2x, ./images/project/mobile/img2.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img3.jpg" alt="Изображение Николая Тарасова" />
+            </picture>  
           </a>
           <div>
             <h3 class="projects-list__title">Ресторан Seafood</h3>
@@ -106,8 +169,13 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div>  
-            <img class="projects-list__image image" src="./images/project/img4.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </div>
+            <picture>
+              <source srcset="./images/project/img4x2.jpg 2x, ./images/project/img4.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img4x2.jpg 2x, ./images/project/tablet/img4.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img3x2.jpg 2x, ./images/project/mobile/img3.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img4.jpg" alt="Изображение Михаила Ермакова"/>
+            </picture> 
           </a>
           <div>
             <h3 class="projects-list__title">Проект Prime</h3>
@@ -118,8 +186,13 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div>  
-            <img class="projects-list__image image" src="./images/project/img5.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </div>
+            <picture>
+              <source srcset="./images/project/img5x2.jpg 2x, ./images/project/img5.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img5x2.jpg 2x, ./images/project/tablet/img5.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img4x2.jpg 2x, ./images/project/mobile/img4.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img5.jpg" alt="Изображение Михаила Ермакова">
+            </picture>    
           </a>
           <div>
             <h3 class="projects-list__title">Проект Boxes</h3>
@@ -130,8 +203,13 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div>  
-            <img class="projects-list__image image" src="./images/project/img6.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </div>
+            <picture>
+              <source srcset="./images/project/img6x2.jpg 2x, ./images/project/img6.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img6x2.jpg 2x, ./images/project/tablet/img6.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img5x2.jpg 2x, ./images/project/mobile/img5.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img6.jpg" alt="Изображение Михаила Ермакова"/>
+            </picture>  
           </a>
           <div>
             <h3 class="projects-list__title">Inspiration has no Borders</h3>
@@ -142,8 +220,13 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div> 
-            <img class="projects-list__image image" src="./images/project/img7.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </div>
+            <picture>
+              <source srcset="./images/project/img7x2.jpg 2x, ./images/project/img7.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img7x2.jpg 2x, ./images/project/tablet/img7.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img6x2.jpg 2x, ./images/project/mobile/img6.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img7.jpg" alt="Изображение Михаила Ермакова" /> 
+            </picture>  
           </a>
           <div>
             <h3 class="projects-list__title">Издание Limited Edition</h3>
@@ -154,8 +237,14 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div>  
-            <img class="projects-list__image image" src="./images/project/img8.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </div>
+            <picture>
+              <source srcset="./images/project/img8x2.jpg 2x, ./images/project/img8.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img8x2.jpg 2x, ./images/project/tablet/img8.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img7x2.jpg 2x, ./images/project/mobile/img7.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img8.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </picture>  
+
           </a>
           <div>
             <h3 class="projects-list__title">Проект LAB</h3>
@@ -166,8 +255,14 @@
           <a class="projects-description-tumb" href="#">
             <div class="projects-list__description">  
               <p>Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
-            </div>  
-            <img class="projects-list__image image" src="./images/project/img9.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </div> 
+            <picture>
+              <source srcset="./images/project/img9x2.jpg 2x, ./images/project/img9.jpg 1x" media="(min-width: 1200px)">
+              <source srcset="./images/project/tablet/img9x2.jpg 2x, ./images/project/tablet/img9.jpg 1x" media="(min-width: 768px)">
+              <source srcset="./images/project/mobile/img8x2.jpg 2x, ./images/project/mobile/img8.jpg 1x" media="(min-width: 320px)">
+              <img class="projects-list__image image" src="./images/project/img9.jpg" alt="Изображение Михаила Ермакова" width="370" />
+            </picture>  
+
           </a>
           <div>
             <h3 class="projects-list__title">Growing Business</h3>
@@ -226,15 +321,17 @@
     </ul>
       </div>
 
-      <div class="footer-social">
+      <div class="footer-social footer-social_box">
         <span class="footer-social__title">Подпишитесь на рассылку</span>
         <form class="footer-form" name="footer-form">
             <label class="footer-form__field"><input type="text" class="footer-form__letter-input" placeholder="E-mail" /></label>
-            <button class="footer__button btn btn_send-icon" type="submit">Подписаться</button>
+            <button class="footer-social__button btn btn_send-icon" type="submit">Подписаться</button>
           </form>
+        
       </div>
     </div>
   </footer>
+  <script src="./js/modal-mobile.js"></script>
 </body>
 
 </html>

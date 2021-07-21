@@ -13,7 +13,7 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="sass/main.css">
   <title>Студия</title>
 </head>
 
@@ -49,7 +49,56 @@
               +38 096 111 11 11</a>
           </li>
         </ul>
-    </div>
+
+    <!-- Мобильное меню -->
+    <button type="button" class="menu-open">
+      <svg width="22" height="22" aria-label="Переключатель мобильного меню">
+        <use class="menu-open__icon" href="./images/sprites/svg/sprite.svg#icon-menu"></use>
+        <use class="menu-open__menu" href="./images/sprites/svg/sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+  </div>
+    <div class="mob-menu is-hidden" >
+      <div class="container">
+      <button class="btn-close">
+        <svg class="modal-close-icon">
+        </svg>
+        </button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-list__item">
+            <a href="./index.html" class="mob-menu-list__link mob-menu-list__active">Студия</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a href="./portfolio.html" class="mob-menu-list__link">Портфолио</a>
+          </li>
+          <li class="mob-menu-list__item">
+            <a href="" class="mob-menu-list__link">Контакты</a>
+          </li>
+        </ul>
+        <div class="mob-menu-bottom">
+          <ul class="mob-menu-contacts list">
+            <li class="mob-menu-contacts__item">
+              <a href="" class="mob-menu-contacts__link mob-menu-contacts__link_size_big">+38 096 111 11 11</a>
+            </li>
+            <li class="mob-menu-contacts__item">
+              <a href="" class="mob-menu-contacts__link mob-menu-contacts__link_size_small">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mob-menu-social list">
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">Instagram</a>
+            </li>
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">Twitter</a>
+            </li>
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">Facebook</a>
+            </li>
+            <li class="mob-menu-social__item">
+              <a href="" class="mob-menu-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
   </header>
 
   <main class="main">
@@ -143,8 +192,12 @@
           <ul class="team__list">
 
             <li class="team-item">
-              <img class="team-item__image image" src="./images/team/img1.jpg" alt="Изображение Игоря Демьяненко"
-                width="270" />
+              <picture>
+                <source srcset="./images/team/img1x2.jpg 2x, ./images/team/img1.jpg 1x" media="(min-width: 1200px)">
+                <source srcset="./images/team/tablet/img1x2.jpg 2x, ./images/team/img1.jpg 1x" media="(min-width: 768px)">
+                <source srcset="./images/team/mob/img1x2.jpg 2x, ./images/team/mob/img1.jpg 1x" media="(min-width: 320px)">
+                <img class="team-item__image image" src="./images/team/img1.jpg" alt="Изображение Игоря Демьяненко">
+              </picture>
               <h3 class="team-item__text team-item__text_title-box">Игорь Демьяненко</h3>
               <p class="team-item__text team-item__text_subtitle-box">Product Designer</p>
 
@@ -181,7 +234,12 @@
             </li>
 
             <li class="team-item">
-              <img class="team-item__image image" src="./images/team/img2.jpg" alt="Изображение Ольги Репиной" width="270" />
+              <picture>
+                <source srcset="./images/team/img2x2.jpg 2x, ./images/team/img2.jpg 1x" media="(min-width: 1200px)">
+                <source srcset="./images/team/tablet/img2x2.jpg 2x, ./images/team/img2.jpg 1x" media="(min-width: 768px)">
+                <source srcset="./images/team/mob/img2x2.jpg 2x, ./images/team/mob/img2.jpg 1x" media="(min-width: 320px)">
+                <img class="team-item__image image" src="./images/team/img2.jpg" alt="Изображение Ольги Репиной" width="270" />
+              </picture>
               <h3 class="team-item__text team-item__text_title-box">Ольга Репина</h3>
               <p class="team-item__text team-item__text_subtitle-box">Frontend Developer</p>
               
@@ -218,8 +276,12 @@
             </li>
 
             <li class="team-item">
-              <img class="team-item__image image" src="./images/team/img3.jpg" alt="Изображение Николая Тарасова"
-                width="270" />
+              <picture>
+                <source srcset="./images/team/img3x2.jpg 2x, ./images/team/img3.jpg 1x" media="(min-width: 1200px)">
+                <source srcset="./images/team/tablet/img3x2.jpg 2x, ./images/team/img3.jpg 1x" media="(min-width: 768px)">
+                <source srcset="./images/team/mob/img3x2.jpg 2x, ./images/team/mob/img3.jpg 1x" media="(min-width: 320px)">
+                <img class="team-item__image image" src="./images/team/img3.jpg" alt="Изображение Николая Тарасова">
+              </picture>
               <h3 class="team-item__text team-item__text_title-box">Николай Тарасов</h3>
               <p class="team-item__text team-item__text_subtitle-box">Marketing</p>
               
@@ -256,8 +318,12 @@
             </li>
 
             <li class="team-item">
-              <img class="team-item__image image" src="./images/team/img4.jpg" alt="Изображение Михаила Ермакова"
-                width="270" />
+              <picture>
+                <source srcset="./images/team/img4x2.jpg 2x, ./images/team/img4.jpg 1x" media="(min-width: 1200px)">
+                <source srcset="./images/team/tablet/img4x2.jpg 2x, ./images/team/img4.jpg 1x" media="(min-width: 768px)">
+                <source srcset="./images/team/mob/img4x2.jpg 2x, ./images/team/mob/img4.jpg 1x" media="(min-width: 320px)">
+                <img class="team-item__image image" src="./images/team/img4.jpg" alt="Изображение Михаила Ермакова" >
+              </picture>
               <h3 class="team-item__text team-item__text_title-box">Михаил Ермаков</h3>
               <p class="team-item__text team-item__text_subtitle-box">UI Designer</p>
 
@@ -294,7 +360,7 @@
             </li>
           </ul>
       </div>
-
+<!---->
     </section>
     <section class="client">
       <h2 class="client__head section-title">Постоянные клиенты</h2>
@@ -382,11 +448,11 @@
     </ul>
       </div>
 
-      <div class="footer-social">
+      <div class="footer-social footer-social_box">
         <span class="footer-social__title">Подпишитесь на рассылку</span>
         <form class="footer-form" name="footer-form">
             <label class="footer-form__field"><input type="text" class="footer-form__letter-input" placeholder="E-mail" /></label>
-            <button class="footer__button btn btn_send-icon" type="submit">Подписаться</button>
+            <button class="footer-social__button btn btn_send-icon" type="submit">Подписаться</button>
         </form>
       </div>
     </div>
@@ -447,7 +513,7 @@
             </div> 
             <span class="policy">
               <p class="policy__text">Соглашаюсь с рассилкой и принимаю</p> 
-              <span class="policy__icon">&nbsp;</span>
+              &nbsp;
               <a class="policy__link" href="#">Условия договора</a>
             </span>
           </label>
@@ -459,6 +525,7 @@
   </div>
   <!--js-->
   <script src="./js/modal.js"></script>
+  <script src="./js/modal-mobile.js"></script>
 </body>
 
 </html>
