@@ -1,17 +1,16 @@
 .modal {
-   position: absolute;
+   height: auto;
+   position:relative;
    top: 50%;
    left: 50%;
-
-   min-width: 528px;
-   min-height: 581px;
    padding: 40px;
-
    background-color: #fff;
    border-radius: 4px;
-
    transform: translate(-50%, -50%) scale(1);
    transition: transform 550ms var(--timing-function);
+   @media screen and (min-width: 768px) {
+   padding: 25px;
+   }
    &__close{
    cursor: pointer;
    position: absolute;
@@ -32,6 +31,21 @@
    &__icon{
    width: 11px;
    height: 11px;
+   }
+   @media screen and (max-width: 320px) {
+      padding: 25px;
+   }
+   @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 450px;
+      height: auto;
+      transform: translate(-50%, -50%) scale(1);
+   }
+   @media screen and (min-width: 1200px) {
+      min-width: 528px;
+      min-height: 581px;
    }
 }
 

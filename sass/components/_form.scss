@@ -1,12 +1,19 @@
 .form {
-   display: inline-block;
+   display: block;
+   height: auto;
+   @media screen and (max-width: 767px) {
+   width: 100%;
+   }
    &__title {
    font-weight: 700;
    font-size: 20px;
    line-height: 1.15px;
    text-align: center;
    color: var(--title-text-color);
-   margin: 26px 15px;
+   margin-bottom: 15px;
+   @media screen and (min-width: 768px) {
+   line-height: 1.15;
+   }
    }
 }
 
@@ -62,15 +69,15 @@
 
 .input-check{
    &__text {
-   cursor: pointer;
    display: flex;
+   width: 100%;
+   cursor: pointer;
    align-items: center;
 }
    &__text div {
    display: flex;
    align-items: center;
    justify-content: center;
-   margin: 0 auto;
    width: 16px;
    height: 16px;
    border: 2px solid #090b13;
@@ -87,21 +94,30 @@
 }
 
 .policy{
-   display: inline-flex;
+   display: flex;
    align-items: center;
-   justify-content: space-between;
-   margin-right: auto;
+   height: 15px;
    &__text {
-   font-size: 14px;
-   line-height: 1.71;
+   font-size: 12px;
+   line-height: 1.15;
    cursor: pointer;
    color: #757575;
-}
-   &__link {
+   max-height: 15px;
+   @media screen and (min-width: 1200px) {
    font-size: 14px;
    line-height: 1.71;
+   }
+   }
+   &__link {
+   font-size: 12px;
+   line-height: 1.15;
    color: var(--hover-color);
    text-decoration: underline;
+   max-height: 15px;
+   @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+      }
 }
    &__icon {
    text-decoration: none;

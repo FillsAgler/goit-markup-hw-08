@@ -1,4 +1,9 @@
 .narrative {
+   display: none;
+}
+@media screen and (min-width: 1200px){
+
+.narrative {
    padding-top: 47px;
    padding-bottom: 94px;
    &__head {
@@ -14,5 +19,6 @@
    display: flex;
    flex-wrap: wrap;
    flex-basis: calc(100% / 3 - var(--nararative-margin-left));
+}
 }
 }

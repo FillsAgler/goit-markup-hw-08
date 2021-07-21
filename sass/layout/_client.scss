@@ -1,6 +1,7 @@
 .client {
    padding-top: 94px;
    padding-bottom: 94px;
+
    &__head{
    margin-bottom: 50px;
 }
@@ -8,12 +9,13 @@
 
 .client-list {
    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
    margin: -15px;
    &__item {
    cursor: pointer;
    display: inline-flex;
    margin: 15px;
-
    width: 170px;
    height: 92px;
    border: 1px solid #afb1b8;
@@ -34,5 +36,13 @@
    &__item:focus &__icon {
    fill: var(--button-background-color);
    transition: fill 350ms var(--timing-function);
+}
+
+@media screen and (min-width: 768px) {
+   flex-basis: calc((100% - 3 * 30px) / 3);
+}
+
+@media screen and (min-width: 1200px) {
+   flex-basis: calc((100% - 6 * 30px) / 6);
 }
 }
