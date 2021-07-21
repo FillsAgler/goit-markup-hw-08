@@ -638,7 +638,7 @@ body {
   color: var(--title-text-color);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .nav-list__link {
     padding: 39px 0;
   }
